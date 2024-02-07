@@ -297,7 +297,7 @@ if __name__ == "__main__":
     
     # Read in file content.
     file_content = None
-    with open("main.bib" if len(sys.argv < 2) else sys.argv[-1]) as file:
+    with open("main.bib" if len(sys.argv) < 2 else sys.argv[-1]) as file:
         file_content = file.read()
 
     # Parse document.
