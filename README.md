@@ -1,5 +1,9 @@
 # Borganiser
 
+A customisable script for organising and transforming BibTeX bibliographies.
+
+![Logo](logo.svg)
+
 Borganiser is a lightweight, efficient utility designed to clean, sort, and organise BibTeX bibliographies. It's particularly useful for students and researchers looking to streamline their references in their theses or publications. With Borganiser, you can easily sort your BibTeX entries and their fields alphabetically, ensuring your bibliography is neatly formatted and consistently ordered.
 
 ## Features
