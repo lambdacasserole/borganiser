@@ -297,7 +297,7 @@ if __name__ == "__main__":
     
     # Read in file content.
     file_content = None
-    with open("main.bib" if len(sys.argv) < 2 else sys.argv[-1]) as file:
+    with open("main.bib" if len(sys.argv) < 2 else sys.argv[1]) as file:
         file_content = file.read()
 
     # Parse document.
@@ -308,5 +308,9 @@ if __name__ == "__main__":
     if '-S' not in sys.argv:
         document.sort_entries() # Skip sorting entries if '-S' flag passed.
         
-    # Print document formatted.
-    print(document.to_bibtex())
+    # Print document formatted or save if filename specified.
+    if len(sys.argv) < 3:
+        print(document.to_bibtex())
+    else:
+        with open(sys.argv[2], 'w') as file:
+            file.write(document.to_bibtex())
